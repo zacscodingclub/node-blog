@@ -27,3 +27,6 @@ block content
         option(value='Zac Baston') Zac Baston
         option(value='Bill Braski') Bill Braski
     input.btn.btn-default(name='submit', type='submit', value='Save')
+    script(src='/javascripts/ckeditor/ckeditor.js')
+    script
+      | CKEDITOR.replace('body');
