@@ -9,7 +9,6 @@ var expressValidator = require('express-validator');
 var multer = require('multer');
 var upload = multer({ dest: 'uploads/' });
 var flash = require('connect-flash');
-var moment = require('moment');
 
 var mongo = require('mongodb');
 var db = require('monk')('localhost/node-blog');
@@ -19,6 +18,7 @@ var users = require('./routes/users');
 
 var app = express();
 
+app.locals.moment = require('moment');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
