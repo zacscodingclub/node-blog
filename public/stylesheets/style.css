@@ -17,7 +17,7 @@ body {
   border: 1px solid #ccc;
   margin: 20px auto;
   padding: 20px;
-  border-top: 3px solid #83cd39;
+  border: 3px solid #83cd39;
 }
 
 .clear {
@@ -29,8 +29,9 @@ ul {
   margin: 0;
 }
 
-a {
-  color: #00B7FF;
+.post a {
+  color: #666;
+  text-decoration: none;
 }
 
 h1,h2,h3,p {
@@ -70,4 +71,25 @@ nav a.current, nav a:hover {
 
 footer {
   text-align: center;
+}
+
+.meta {
+  padding: 7px;
+  border: 1px solid #ccc;
+  background: #ccc;
+  margin-bottom: 10px;
+}
+
+a.more{
+  display: block;
+  width: 80px;
+  background: #404137;
+  color: #fff;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.post {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
 }
