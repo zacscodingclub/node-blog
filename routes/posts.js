@@ -9,7 +9,7 @@ router.get('/add', function(req, res, next) {
   var categories = db.get('categories');
   categories.find({}, {}, function(eror, categories) {
     res.render('addpost', {
-      title      : 'Add Post', 
+      title      : 'Add Post',
       categories : categories
     });
   })
@@ -30,7 +30,7 @@ router.post('/add', upload.single('mainimage'), function(req, res, next) {
   var errors = req.validationErrors();
 
   if(errors) {
-    res.render('addpost', { errors: errors});
+    res.render('addpost', { 'errors': errors});
   } else {
     var posts = db.get('posts');
     newPost.title = req.body.title;
